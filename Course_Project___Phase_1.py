@@ -10,7 +10,6 @@ def GetEmpName():
 def GetHoursWorked():
     hours = float(input("Enter hours worked: "))
     return hours
-
 #write the GetHourlyRate function
 def GetHourlyRate():
     hourlyrate = float(input("Enter hourly rate: "))
@@ -56,28 +55,29 @@ if __name__ == "__main__":
         if (empname.upper() == "END"):
             break
         # write the code to assign to hours the return value from GetHoursWorked
-def hours(GetHoursWorked):
-    hours = float(input("Enter hours worked: "))
-    return hours
+        def hours():
+            hours = GetHourlyRate()
+            return hours
+
         # write the code to assign to hourlyrate the return value from GetHourlyRate
-def hourlyrate(GetHourlyRate):
-    hourlyrate = float(input("Enter hourly rate: "))
-    return hourlyrate
+        def hourlyrate():
+            hourlyrate = GetHourlyRate()
+            return hourlyrate
+
         # write the code to assign to taxrate the return value from GetTaxRate
+        def taxrate():
+            taxrate = GetTaxRate()
+            return taxrate
 
-def taxrate(GetTaxRate):
-    taxrate = float(input("Enter Tax Rate: "))
-    return taxrate
 
-
-grosspay, incometax, netpay = CalcTaxAndNetPay(hours, hourlyrate, taxrate)
-printinfo(empname, hours, hourlyrate, grosspay, taxrate, incometax, netpay)
-TotEmployees += 1
-TotHours += hours
-TotGrossPay += grosspay
-TotTax += taxrate
-TotNetPay += netpay
+        grosspay, incometax, netpay = CalcTaxAndNetPay(hours, hourlyrate, taxrate)
+        printinfo(empname, hours, hourlyrate, grosspay, taxrate, incometax, netpay)
+        TotEmployees += 1
+        TotHours += hours
+        TotGrossPay += grosspay
+        TotTax += taxrate
+        TotNetPay += netpay
 
         # write the code to increment the other total variables with the appropriate values
 
-PrintTotals (TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay)
+        PrintTotals (TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay)
